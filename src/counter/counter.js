@@ -3,9 +3,7 @@ import { setIncrement, setDecrement } from "../redux/dataSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {
   useCreateComponentsMutation,
-  useCreateConversationMutation,
-  useGetAllEmployeesQuery,
-  useRegisterUserMutation
+  useGetAllEmployeesQuery
 } from "../redux/dataApiSlice";
 
 const Counter = () => {
@@ -100,7 +98,7 @@ const Counter = () => {
           <h1 className="text-5xl text-gray-200 font-bold text-center pt-10">
             Sign Up Form
           </h1>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 mt-4">
             <div className="w-full flex flex-col gap-3">
               <lable className="block text-gray-200 text-xl ">First Name</lable>
               <input
