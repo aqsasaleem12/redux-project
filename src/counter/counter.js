@@ -47,12 +47,26 @@ const Counter = () => {
   }
   return (
     <>
-      <button onClick={handleIncrementClick}>Increment</button>
-      <button onClick={handleDecrementClick}>Decrement</button>
+      <div className="text-center mt-10">
+        <button
+          onClick={handleIncrementClick}
+          className="bg-transparent border border-gray-600 max-w-[200px] w-full text-white py-3 "
+        >
+          Increment
+        </button>
+        <button
+          onClick={handleDecrementClick}
+          className="bg-transparent border border-gray-600 max-w-[200px] w-full text-white py-3"
+        >
+          Decrement
+        </button>
+      </div>
 
       <div>
-        <h1 className="text-blue-700 text-xl font-extrabold">{increment}</h1>
-        <h1 className="text-blue-700 text-xl font-extrabold">{decrement}</h1>
+        <div className="flex justify-center gap-10">
+          <h1 className="text-blue-700 text-3xl font-extrabold">{increment}</h1>
+          <h1 className="text-blue-700 text-3xl font-extrabold">{decrement}</h1>
+        </div>
 
         {/* <table className="border w-full bg-slate-700 text-white ">
           <thead className="border w-full">
@@ -81,7 +95,7 @@ const Counter = () => {
         {/* onSubmit={(e) => handleChange(e)} */}
         <form
           onSubmit={post}
-          className="max-w-[500px] mx-auto bg-[#030014] px-10 py-5 rounded"
+          className="max-w-[500px] mx-auto bg-[#030014] px-10 py-5 rounded border border-gray-900 mt-5"
         >
           <h1 className="text-5xl text-gray-200 font-bold text-center pt-10">
             Sign Up Form
