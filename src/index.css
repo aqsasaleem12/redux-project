@@ -9,10 +9,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #030014;
+  background: #d4d0e2;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* Add this CSS to your stylesheet or a separate CSS file */
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially hide the modal outside of the viewport */
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align the modal to the right */
+  transition: right 0.3s ease; /* Apply the fade-right transition */
+  z-index: 999; /* Ensure the modal appears above other content */
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #333;
+  padding: 0;
 }
